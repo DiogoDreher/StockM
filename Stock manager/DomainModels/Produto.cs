@@ -116,5 +116,10 @@ namespace Stock_manager.DomainModels
             Preco = preco;
             Stock = stock;
         }
+
+        public string getInfo()
+        {
+            return $"Nome: {Nome}\nCategoria: {Categoria}\nPreço: {Preco}\nStock: {Stock}";
+        }
     }
 }

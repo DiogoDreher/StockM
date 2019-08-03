@@ -23,15 +23,24 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.RowSpan="2">
-            <TextBlock Text="Stock" HorizontalAlignment="Center" Margin="10" FontSize="28"/>
+            <TextBlock Text="Stock" HorizontalAlignment="Center" Margin="50,10,50,372" FontSize="28"/>
+            <Label Content="Nome:" HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="80,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+            <Label Content="Categoria:" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtCat" HorizontalAlignment="Left" Margin="80,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+            <Label Content="Preco:" HorizontalAlignment="Left" Margin="0,152,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtPreco" HorizontalAlignment="Left" Margin="80,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+            <Label Content="Stock:" HorizontalAlignment="Left" Margin="1,184,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtStock" HorizontalAlignment="Left" Height="23" Margin="80,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
+            <Button x:Name="btnAttStk" Click="BtnAttStk_Click" Content="Adicionar" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
         </Grid>
         <ScrollViewer Grid.Column="1" Grid.Row="1" Background="Gray">
             <StackPanel>
-                <TextBlock Text="Products" Margin="10" FontSize="22" FontWeight="Bold"/>
-                <StackPanel Margin="20 0">
-                    <ItemsControl x:Name="ListViewProducts">
+                <TextBlock x:Name="Header" Text="Produtos" Margin="10" FontSize="22" FontWeight="Bold"/>
+                <StackPanel Margin="20 0" >
+                    <ListView x:Name="ListViewProducts" SelectionChanged="ListViewProducts_SelectionChanged">
                         <ItemsControl.ItemTemplate>
-                            <DataTemplate>
+                            <DataTemplate >
                                 <Border Margin="10" Width="110" Height="170" CornerRadius="5" Background="{Binding Color}">
                                     <StackPanel>
                                         <Border Width="100" Height="100" CornerRadius="5" Margin="5">
@@ -54,9 +63,12 @@
                                 <WrapPanel/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
-                    </ItemsControl>
+                    </ListView>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
+        <Label Content="Categoria/Nome do Produto:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="224" FontSize="16"/>
+        <TextBox x:Name="txtNome" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="234,10,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAtualizar" Click="BtnAtualizar_Click" Content="Listar" Grid.Column="1" HorizontalAlignment="Left" Margin="371,9,0,0" VerticalAlignment="Top" Width="93" FontSize="18"/>
     </Grid>
 </Window>
