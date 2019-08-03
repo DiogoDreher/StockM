@@ -24,5 +24,17 @@ namespace Stock_manager
         {
             InitializeComponent();
         }
+
+        private void BtnStock_Click(object sender, RoutedEventArgs e)
+        {
+            Stock JanelaStock = new Stock();
+            this.Close();
+            JanelaStock.ShowDialog();
+        }
+
+        private void BtnListas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

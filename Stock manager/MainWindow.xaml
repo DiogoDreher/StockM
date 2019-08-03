@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stock_manager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        >
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="btnStock" Click="BtnStock_Click" Content="Stock" HorizontalAlignment="Left" Margin="291,149,0,0" VerticalAlignment="Top" Width="197" Height="83"/>
+        <Button x:Name="btnListas" Click="BtnListas_Click" Content="Lists" HorizontalAlignment="Left" Margin="291,281,0,0" VerticalAlignment="Top" Width="197" Height="83"/>
+        <TextBlock Margin="251,38,0,0" TextWrapping="Wrap" Text="Stock Manager" TextAlignment="Center" Height="64" Width="278" FontSize="36" Cursor="Arrow" VerticalAlignment="Top" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

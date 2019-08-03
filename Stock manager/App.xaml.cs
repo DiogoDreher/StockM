@@ -13,5 +13,6 @@ namespace Stock_manager
     /// </summary>
     public partial class App : Application
     {
+        public static string ligacaoBD = "server=DIOGO; database=Stock; user=userStock; pwd=mmiqdpotsi;";
     }
 }
