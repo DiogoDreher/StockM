@@ -102,7 +102,7 @@ namespace Stock_manager.DomainModels
         public string atualizar(Produto p)
         {
             string erros = "";
-            string sql1 = "INSERT INTO Produtos (nome, categoria, preco, stock) VALUES (@nome, @categoria, @preco, @stock)";
+            string sql1 = "INSERT INTO Produtos (nome, categoria, preco, stock, image) VALUES (@nome, @categoria, @preco, @stock, @image)";
             string sql2 = "UPDATE Produtos SET stock = @stock WHERE guidProduto = @guidProduto";
 
             try
@@ -125,6 +125,7 @@ namespace Stock_manager.DomainModels
                 pedido.Parameters.AddWithValue("@categoria", p.Categoria);
                 pedido.Parameters.AddWithValue("@preco", p.Preco);
                 pedido.Parameters.AddWithValue("@stock", p.Stock);
+                pedido.Parameters.AddWithValue("@image", p.Nome + ".jpg");
 
                 pedido.Connection.Open();
                 pedido.ExecuteNonQuery();

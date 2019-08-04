@@ -38,12 +38,13 @@
             <StackPanel>
                 <TextBlock x:Name="Header" Text="Produtos" Margin="10" FontSize="22" FontWeight="Bold"/>
                 <StackPanel Margin="20 0" >
-                    <ListView x:Name="ListViewProducts" SelectionChanged="ListViewProducts_SelectionChanged">
+                    <ItemsControl>
+                        <ListBox x:Name="ListViewProducts" SelectionChanged="ListViewProducts_SelectionChanged">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate >
-                                <Border Margin="10" Width="110" Height="170" CornerRadius="5" Background="{Binding Color}">
+                                <Border Margin="10" Width="90" Height="150" CornerRadius="5" Background="{Binding Color}">
                                     <StackPanel>
-                                        <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
                                             <Border.Effect>
                                                 <DropShadowEffect ShadowDepth="1"/>
                                             </Border.Effect>
@@ -63,7 +64,8 @@
                                 <WrapPanel/>
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
-                    </ListView>
+                    </ListBox>
+                    </ItemsControl>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

@@ -121,5 +121,10 @@ namespace Stock_manager.DomainModels
         {
             return $"Nome: {Nome}\nCategoria: {Categoria}\nPreço: {Preco}\nStock: {Stock}";
         }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

@@ -34,7 +34,9 @@ namespace Stock_manager
 
         private void BtnListas_Click(object sender, RoutedEventArgs e)
         {
-
+            Listas JanelaListas = new Listas();
+            this.Close();
+            JanelaListas.ShowDialog();
         }
     }
 }
