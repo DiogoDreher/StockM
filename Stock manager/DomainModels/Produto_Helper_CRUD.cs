@@ -121,11 +121,14 @@ namespace Stock_manager.DomainModels
                 
                 pedido.CommandType = CommandType.Text;
 
+                string nome = p.Nome.ToLower();
+                nome = nome.Replace(" ", string.Empty);
+
                 pedido.Parameters.AddWithValue("@nome", p.Nome);
                 pedido.Parameters.AddWithValue("@categoria", p.Categoria);
                 pedido.Parameters.AddWithValue("@preco", p.Preco);
                 pedido.Parameters.AddWithValue("@stock", p.Stock);
-                pedido.Parameters.AddWithValue("@image", p.Nome + ".jpg");
+                pedido.Parameters.AddWithValue("@image", nome + ".jpg");
 
                 pedido.Connection.Open();
                 pedido.ExecuteNonQuery();

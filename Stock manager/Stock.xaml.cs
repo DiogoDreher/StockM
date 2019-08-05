@@ -130,5 +130,12 @@ namespace Stock_manager
             _editProduto = null;
             btnAttStk.Content = "Adicionar";
         }
+
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow JanelaPrincipal = new MainWindow();
+            this.Close();
+            JanelaPrincipal.ShowDialog();
+        }
     }
 }

@@ -29,6 +29,7 @@
             <Label Content="Criador:" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txtDono" HorizontalAlignment="Left" Margin="80,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80"/>
             <Button x:Name="btnAdd" Click="BtnAdd_Click" Content="Adicionar" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
+            <Button x:Name="btnVoltar" Click="BtnVoltar_Click" Content="Voltar" HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="150"/>
         </Grid>
         <ScrollViewer Grid.Column="1" Grid.Row="1" Background="Gray">
             <StackPanel>
@@ -38,7 +39,7 @@
                         <ListBox x:Name="ListViewLists" SelectionChanged="ListViewLists_SelectionChanged">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate >
-                                    <Border Margin="10" Width="90" Height="150" CornerRadius="5" >
+                                    <Border Margin="10" Width="110" Height="150" CornerRadius="5" >
                                         <StackPanel>
                                             <Border Width="80" Height="80" CornerRadius="5" Margin="5">
                                                 <Border.Effect>

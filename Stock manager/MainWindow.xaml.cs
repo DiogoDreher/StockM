@@ -38,5 +38,16 @@ namespace Stock_manager
             this.Close();
             JanelaListas.ShowDialog();
         }
+
+        private void BtnSair_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Você tem certeza que deseja sair?", "Mensagem do Sistema", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+
+            {
+
+                App.Current.Shutdown();
+
+            }
+        }
     }
 }

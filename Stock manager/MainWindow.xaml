@@ -25,5 +25,6 @@
         <Button x:Name="btnStock" Click="BtnStock_Click" Content="Stock" HorizontalAlignment="Left" Margin="291,149,0,0" VerticalAlignment="Top" Width="197" Height="83"/>
         <Button x:Name="btnListas" Click="BtnListas_Click" Content="Listas" HorizontalAlignment="Left" Margin="291,281,0,0" VerticalAlignment="Top" Width="197" Height="83"/>
         <TextBlock Margin="251,38,0,0" TextWrapping="Wrap" Text="Stock Manager" TextAlignment="Center" Height="64" Width="278" FontSize="36" Cursor="Arrow" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button x:Name="btnSair" Click="BtnSair_Click" Content="X" FontWeight="Bold" FontSize="24" HorizontalAlignment="Left" Margin="730,356,0,0" Padding="0" Background="Red" BorderBrush="Transparent" VerticalAlignment="Top" Width="40" Height="40"/>
     </Grid>
 </Window>

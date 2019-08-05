@@ -73,5 +73,12 @@ namespace Stock_manager
             txtName.Text = "";
             txtDono.Text = "";
         }
+
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow JanelaPrincipal = new MainWindow();
+            this.Close();
+            JanelaPrincipal.ShowDialog();
+        }
     }
 }

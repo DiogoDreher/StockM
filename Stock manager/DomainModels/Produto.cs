@@ -61,7 +61,7 @@ namespace Stock_manager.DomainModels
                 return _preco;
             }
             set {
-                _preco = Convert.ToDecimal(value);
+                _preco = value;
             }
         }
 
